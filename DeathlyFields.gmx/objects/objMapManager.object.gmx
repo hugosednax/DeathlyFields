@@ -25,24 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MAP_INIT_POSITION_X=room_width/2 - MAP_WIDTH*BLOCK_SIZE/2;
-MAP_INIT_POSITION_Y=room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2;
-MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
+            <string>MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
+initMap();
 
-var i,j;
-for(i=0;i&lt;MAP_WIDTH;i++){
-    for(j=0;j&lt;MAP_HEIGHT;j++){
-        mapFog[i,j]=0;
-        mapContents[i,j] = instance_create(
-                        MAP_INIT_POSITION_X+i*BLOCK_SIZE,
-                        MAP_INIT_POSITION_Y+j*BLOCK_SIZE,
-                        objMapBlock);
-        mapContents[i,j].indexX = i;
-        mapContents[i,j].indexY = j;
-    }
-}
 
-pushMapElement(objUnit,300,200);
+pushMapElement(objUnit,4,5);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;

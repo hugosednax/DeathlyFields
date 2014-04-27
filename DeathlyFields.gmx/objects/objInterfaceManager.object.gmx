@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_xview[0] = MAP_INIT_POSITION_X;
+view_yview[0] = MAP_INIT_POSITION_Y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -37,7 +61,7 @@ if(objSel != -1){
     draw_text(VIEW_WIDTH-300,60,objSel.name);
     if(objSel.sprite_index!=-1){
         draw_rectangle(VIEW_WIDTH-300,90,VIEW_WIDTH-200,190,1);
-        draw_sprite_ext(objSel.sprite_index,0,VIEW_WIDTH-300,90,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+        draw_sprite_ext(objSel.sprite_index,0,VIEW_WIDTH-250,140,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
     }
 }
 draw_set_color(prevColor);

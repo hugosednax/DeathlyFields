@@ -4,6 +4,7 @@ arg1 : new position x
 arg2 : new position y
 */
 with(objMapManager){
+    //FIX THIS COORDINATES
     initIndexX = round(abs(argument0.x - MAP_INIT_POSITION_X)/BLOCK_SIZE);
     initIndexY = round(abs(argument0.y - MAP_INIT_POSITION_Y)/BLOCK_SIZE);
     

@@ -16,6 +16,8 @@
       <sprite>sprites\sprMapBlockRedDiamong</sprite>
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprFogBlock</sprite>
+      <sprite>sprites\sprHexagonBlock</sprite>
+      <sprite>sprites\sprHexagonFog</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -46,6 +48,7 @@
       <script>scripts\clickToSelect.gml</script>
       <script>scripts\convertIndexToCoordinates.gml</script>
       <script>scripts\convertCoordinatesToIndex.gml</script>
+      <script>scripts\initMap.gml</script>
     </scripts>
     <scripts name="Draw">
       <script>scripts\drawSprite.gml</script>
@@ -84,12 +87,14 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="5">
+  <constants number="7">
     <constant name="MAP_WIDTH">80</constant>
     <constant name="MAP_HEIGHT">80</constant>
     <constant name="BLOCK_SIZE">64</constant>
     <constant name="VIEW_WIDTH">1200</constant>
     <constant name="VIEW_HEIGHT">700</constant>
+    <constant name="MAP_INIT_POSITION_X">room_width/2 - MAP_WIDTH*BLOCK_SIZE/2</constant>
+    <constant name="MAP_INIT_POSITION_Y">room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
