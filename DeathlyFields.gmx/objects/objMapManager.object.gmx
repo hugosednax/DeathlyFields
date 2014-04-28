@@ -27,9 +27,8 @@
             <kind>1</kind>
             <string>MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
 initMap();
+pushMapElement(objUnit,10,10);
 
-
-pushMapElement(objUnit,4,5);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;
