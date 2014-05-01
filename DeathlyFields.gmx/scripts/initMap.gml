@@ -12,6 +12,7 @@ for(i=0;i<MAP_WIDTH;i++){
                         MAP_INIT_POSITION_X+i*BLOCK_SIZE+BLOCK_SIZE/2,
                         MAP_INIT_POSITION_Y+j*BLOCK_SIZE*3/4,
                         objMapBlock);
+        mapAbleToMove[i,j]=0;
         mapContents[i,j].mapPositionX = i;
         mapContents[i,j].mapPositionY = j;
     }

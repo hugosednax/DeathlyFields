@@ -35,7 +35,8 @@ with(objMapManager){
         for(ky=initY-sight; ky<=initY+sight;ky++){
             for(kz=initZ-sight; kz<=initZ+sight;kz++){
                 if (kx+ky+kz == 0){
-                    mapFog[kx+(kz-(kz&1))/2,kz] ++;
+                    if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
+                        mapFog[kx+(kz-(kz&1))/2,kz] ++;
                 }
             }
         }

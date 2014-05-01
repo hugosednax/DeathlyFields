@@ -12,4 +12,4 @@ else{
     value += (MAP_INIT_POSITION_Y+argument1*BLOCK_SIZE*3/4) * 10000;
 }
 return value;
-//return values : X = return mod 1000; Y = return div 1000;
+//return values : X = return mod 10000; Y = return div 10000;

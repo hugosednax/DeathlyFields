@@ -18,6 +18,9 @@
       <sprite>sprites\sprFogBlock</sprite>
       <sprite>sprites\sprHexagonBlock</sprite>
       <sprite>sprites\sprHexagonFog</sprite>
+      <sprite>sprites\sprRedBlock</sprite>
+      <sprite>sprites\sprBlueBlock</sprite>
+      <sprite>sprites\sprInterfaceRect</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -49,6 +52,10 @@
       <script>scripts\convertIndexToCoordinates.gml</script>
       <script>scripts\convertCoordinatesToIndex.gml</script>
       <script>scripts\initMap.gml</script>
+      <scripts name="Movement">
+        <script>scripts\drawPositionsToMove.gml</script>
+        <script>scripts\resetMoveMap.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Draw">
       <script>scripts\drawSprite.gml</script>
