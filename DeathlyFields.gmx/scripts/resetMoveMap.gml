@@ -19,7 +19,8 @@ for(kx=initX-moveRange; kx<=initX+moveRange;kx++){
         for(kz=initZ-moveRange; kz<=initZ+moveRange;kz++){
             if (kx+ky+kz == 0){
                 if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                    objMapManager.mapAbleToMove[kx+(kz-(kz&1))/2,kz] =1;
+                    if(objMapManager.mapContents[kx+(kz-(kz&1))/2,kz] == -1)
+                        objMapManager.mapAbleToMove[kx+(kz-(kz&1))/2,kz] =1;
             }
         }
     }

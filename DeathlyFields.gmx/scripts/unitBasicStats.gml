@@ -5,3 +5,4 @@ range = argument3;
 hitpoints = argument4;
 attack = argument5;
 moveRange = argument6;
+team = argument7;

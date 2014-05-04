@@ -10,6 +10,7 @@
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
       <sprite>sprites\Mech</sprite>
+      <sprite>sprites\sprTroll</sprite>
       <sprite>sprites\build</sprite>
       <sprite>sprites\sprGround</sprite>
       <sprite>sprites\sprGroundDiamond</sprite>
@@ -17,10 +18,16 @@
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprFogBlock</sprite>
       <sprite>sprites\sprHexagonBlock</sprite>
+      <sprite>sprites\sprite17</sprite>
+      <sprite>sprites\sprHexagonBlock2</sprite>
       <sprite>sprites\sprHexagonFog</sprite>
+      <sprite>sprites\sprite19</sprite>
+      <sprite>sprites\sprite20</sprite>
       <sprite>sprites\sprRedBlock</sprite>
       <sprite>sprites\sprBlueBlock</sprite>
       <sprite>sprites\sprInterfaceRect</sprite>
+      <sprite>sprites\sprite18</sprite>
+      <sprite>sprites\sprite21</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -73,7 +80,9 @@
       <object>objects\objMapBlock</object>
       <object>objects\objresource</object>
       <objects name="Units">
-        <object>objects\objUnit</object>
+        <object>objects\objTrollWarrior</object>
+        <object>objects\objBlindBomber</object>
+        <object>objects\objTroll</object>
       </objects>
     </objects>
     <objects name="Deck">
@@ -89,6 +98,8 @@
     </objects>
     <objects name="GeneralParentObjs">
       <object>objects\objSelectable</object>
+      <object>objects\objSelectableCard</object>
+      <object>objects\objSelectableUnit</object>
     </objects>
   </objects>
   <rooms name="rooms">

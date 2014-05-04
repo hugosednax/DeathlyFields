@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -32,7 +32,7 @@ view_yview[0] = MAP_INIT_POSITION_Y;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,20 +49,21 @@ view_yview[0] = MAP_INIT_POSITION_Y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-var prevColor = draw_get_color();
+            <string>var prevColor = draw_get_color();
+var initX = view_xview[0];
+var initY = view_yview[0];
 draw_set_color(c_gray);
 //draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,0);
-draw_sprite_ext(sprInterfaceRect,0,VIEW_WIDTH-320,0,VIEW_WIDTH/sprInterfaceRect.sprite_width,VIEW_HEIGHT/sprInterfaceRect.sprite_height,0,c_white,0.6);
+draw_sprite_ext(sprInterfaceRect,0,initX+VIEW_WIDTH-320,initY,VIEW_WIDTH/sprite_get_width(sprInterfaceRect),VIEW_HEIGHT/sprite_get_height(sprInterfaceRect),0,c_white,0.6);
 draw_set_color(c_black);
-draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,1);
+draw_rectangle(initX+VIEW_WIDTH-320,initY,initX+VIEW_WIDTH,initY+VIEW_HEIGHT,1);
 draw_set_color(c_black);
 objSel = objSelectionManager.selectedInstance;
 if(objSel != -1){
-    draw_text(VIEW_WIDTH-300,60,objSel.name);
+    draw_text(initX+VIEW_WIDTH-300,initY+60,objSel.name);
     if(objSel.sprite_index!=-1){
-        draw_rectangle(VIEW_WIDTH-300,90,VIEW_WIDTH-200,190,1);
-        draw_sprite_ext(objSel.sprite_index,0,VIEW_WIDTH-250,140,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+        draw_rectangle(initX+VIEW_WIDTH-300,initY+90,initX+VIEW_WIDTH-200,initY+190,1);
+        draw_sprite_ext(objSel.sprite_index,0,initX+VIEW_WIDTH-250,initY+140,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
     }
 }
 draw_set_color(prevColor);

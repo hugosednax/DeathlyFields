@@ -9,54 +9,43 @@ with(objMapManager){
     
     newIndexX = argument1;
     newIndexY = argument2;
-    
-    width = objID.sprite_width/32;
-    height = objID.sprite_height/32;
-    
-    var k,l;
-    for(k=initIndexX;k<initIndexX+width && k<MAP_WIDTH;k++){
-        for(l=initIndexY;l<initIndexY+height && l<MAP_HEIGHT;l++){
-            mapContents[k,l] = 0;
-        }
-    }
-    
-    for(k=newIndexX;k<newIndexX+width && k<MAP_WIDTH;k++){
-        for(l=newIndexY;l<newIndexY+height && l<MAP_HEIGHT;l++){
-            mapContents[k,l] = argument0;
-        }
-    }
-    
-    var initX,InitY,InitZ, sight;
-    sight = argument0.sight;
-    initX=initIndexX - (initIndexY- (initIndexY&1))/2;
-    initZ=initIndexY;
-    initY=-(initX+initZ);
 
-    var kx,ky,kz;
-
-
-    for(kx=initX-sight; kx<=initX+sight;kx++){
-        for(ky=initY-sight; ky<=initY+sight;ky++){
-            for(kz=initZ-sight; kz<=initZ+sight;kz++){
-                if (kx+ky+kz == 0){
-                    if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                        mapFog[kx+(kz-(kz&1))/2,kz] --;
+    mapContents[initIndexX,initIndexY] = -1;
+    mapContents[newIndexX,newIndexY] = argument0;
+    
+    if(argument0.team == objMapManager.team){
+        var initX,InitY,InitZ, sight;
+        sight = argument0.sight;
+        initX=initIndexX - (initIndexY- (initIndexY&1))/2;
+        initZ=initIndexY;
+        initY=-(initX+initZ);
+    
+        var kx,ky,kz;
+    
+    
+        for(kx=initX-sight; kx<=initX+sight;kx++){
+            for(ky=initY-sight; ky<=initY+sight;ky++){
+                for(kz=initZ-sight; kz<=initZ+sight;kz++){
+                    if (kx+ky+kz == 0){
+                        if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
+                            mapFog[kx+(kz-(kz&1))/2,kz] --;
+                    }
                 }
             }
         }
-    }
-
-    initX=newIndexX - (newIndexY- (newIndexY&1))/2;
-    initZ=newIndexY;
-    initY=-(initX+initZ);
-
-
-    for(kx=initX-sight; kx<=initX+sight;kx++){
-        for(ky=initY-sight; ky<=initY+sight;ky++){
-            for(kz=initZ-sight; kz<=initZ+sight;kz++){
-                if (kx+ky+kz == 0){
-                    if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                        mapFog[kx+(kz-(kz&1))/2,kz]++;
+    
+        initX=newIndexX - (newIndexY- (newIndexY&1))/2;
+        initZ=newIndexY;
+        initY=-(initX+initZ);
+    
+    
+        for(kx=initX-sight; kx<=initX+sight;kx++){
+            for(ky=initY-sight; ky<=initY+sight;ky++){
+                for(kz=initZ-sight; kz<=initZ+sight;kz++){
+                    if (kx+ky+kz == 0){
+                        if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
+                            mapFog[kx+(kz-(kz&1))/2,kz]++;
+                    }
                 }
             }
         }
