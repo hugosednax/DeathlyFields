@@ -25,14 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>DECK_SIZE=20;
-
-
-ChosenDeck[0]=objCard1;
-ChosenDeck[1]=objCard1;
+            <string>ChosenDeck[0]=objCard1;
+ChosenDeck[1]=objCard2;
 ChosenDeck[2]=objCard1;
 ChosenDeck[3]=objCard1;
-ChosenDeck[4]=objCard1;
+ChosenDeck[4]=objCard2;
 ChosenDeck[5]=objCard1;
 
 currSize=array_length_1d(ChosenDeck);

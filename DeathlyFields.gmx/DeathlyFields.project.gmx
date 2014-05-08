@@ -31,6 +31,7 @@
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
+      <sprite>sprites\sprCard2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -91,6 +92,7 @@
     </objects>
     <objects name="Cards">
       <object>objects\objCard1</object>
+      <object>objects\objCard2</object>
       <object>objects\objCardParent</object>
     </objects>
     <objects name="Hand">
@@ -105,7 +107,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="7">
+  <constants number="9">
     <constant name="MAP_WIDTH">80</constant>
     <constant name="MAP_HEIGHT">80</constant>
     <constant name="BLOCK_SIZE">64</constant>
@@ -113,6 +115,8 @@
     <constant name="VIEW_HEIGHT">700</constant>
     <constant name="MAP_INIT_POSITION_X">room_width/2 - MAP_WIDTH*BLOCK_SIZE/2</constant>
     <constant name="MAP_INIT_POSITION_Y">room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2</constant>
+    <constant name="DECK_SIZE">20</constant>
+    <constant name="MAX_CARD_HAND">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

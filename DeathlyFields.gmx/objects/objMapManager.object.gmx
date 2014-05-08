@@ -31,8 +31,6 @@ team = 0;
 pushMapElement(objBlindBomber,10,10);
 pushMapElement(objTrollWarrior,7,10);
 pushMapElement(objTroll,12,11);
-
-instance_create(-900,-1500,objCard1);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>ingameSize=objDeck.currSize;
 for(i=0;i&lt;ingameSize;i++){
-ChosenDeckIngame[i]=objDeck.ChosenDeck[i];
+    ChosenDeckIngame[i]=objDeck.ChosenDeck[i];
 }
 ShuffleDeck(ingameSize);
 instance_create(0,0,objHand);
