@@ -28,6 +28,7 @@
       <sprite>sprites\sprInterfaceRect</sprite>
       <sprite>sprites\sprite18</sprite>
       <sprite>sprites\sprite21</sprite>
+      <sprite>sprites\sprite23</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -64,6 +65,11 @@
         <script>scripts\drawPositionsToMove.gml</script>
         <script>scripts\resetMoveMap.gml</script>
       </scripts>
+      <scripts name="Attack">
+        <script>scripts\drawPositionToAttack.gml</script>
+        <script>scripts\resetAttackMap.gml</script>
+        <script>scripts\normalAttack.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Draw">
       <script>scripts\drawSprite.gml</script>
@@ -82,6 +88,7 @@
       <object>objects\objresource</object>
       <objects name="Units">
         <object>objects\objTrollWarrior</object>
+        <object>objects\objRanentaur</object>
         <object>objects\objBlindBomber</object>
         <object>objects\objTroll</object>
       </objects>

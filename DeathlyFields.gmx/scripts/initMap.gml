@@ -14,6 +14,7 @@ for(i=0;i<MAP_WIDTH;i++){
                         objMapBlock);
         mapContents[i,j] = -1;
         mapAbleToMove[i,j]=0;
+        mapAbleToAttack[i,j]=false;
         newInstanceBlock.mapPositionX = i;
         newInstanceBlock.mapPositionY = j;
     }

@@ -58,12 +58,18 @@ draw_sprite_ext(sprInterfaceRect,0,initX+VIEW_WIDTH-320,initY,VIEW_WIDTH/sprite_
 draw_set_color(c_black);
 draw_rectangle(initX+VIEW_WIDTH-320,initY,initX+VIEW_WIDTH,initY+VIEW_HEIGHT,1);
 draw_set_color(c_black);
-objSel = objSelectionManager.selectedInstance;
+var objSel = objSelectionManager.selectedInstance;
 if(objSel != -1){
     draw_text(initX+VIEW_WIDTH-300,initY+60,objSel.name);
     if(objSel.sprite_index!=-1){
-        draw_rectangle(initX+VIEW_WIDTH-300,initY+90,initX+VIEW_WIDTH-200,initY+190,1);
+        draw_rectangle( initX+VIEW_WIDTH-300,initY+90,
+                        initX+VIEW_WIDTH-200,initY+190,1);
         draw_sprite_ext(objSel.sprite_index,0,initX+VIEW_WIDTH-250,initY+140,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+        draw_rectangle( initX+VIEW_WIDTH-300,initY+210,
+                        initX+VIEW_WIDTH-200,initY+230,1);
+        draw_rectangle_color(   initX+VIEW_WIDTH-300,initY+210,
+                                initX+VIEW_WIDTH-300+100*objSel.hitpointsCurr/objSel.hitpointsMax,initY+230,
+                                c_green,c_green,c_green,c_green,0);
     }
 }
 draw_set_color(prevColor);
