@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>print_y = VIEW_HEIGHT - 50;
+            <string>/*print_y = VIEW_HEIGHT - 50;
 print_x = 50;
 draw_text(print_x,print_y,"mouse_x: " + string(mouse_x));
-draw_text(print_x,print_y+20,"mouse_y: " + string(mouse_y));
+draw_text(print_x,print_y+20,"mouse_y: " + string(mouse_y));*/
 
 </string>
           </argument>

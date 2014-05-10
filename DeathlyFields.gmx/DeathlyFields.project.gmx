@@ -17,6 +17,7 @@
       <sprite>sprites\sprMapBlockRedDiamong</sprite>
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprFogBlock</sprite>
+      <sprite>sprites\sprBlackBlock</sprite>
       <sprite>sprites\sprHexagonBlock</sprite>
       <sprite>sprites\sprite17</sprite>
       <sprite>sprites\sprHexagonBlock2</sprite>
@@ -27,8 +28,8 @@
       <sprite>sprites\sprBlueBlock</sprite>
       <sprite>sprites\sprInterfaceRect</sprite>
       <sprite>sprites\sprite18</sprite>
-      <sprite>sprites\sprite21</sprite>
-      <sprite>sprites\sprite23</sprite>
+      <sprite>sprites\sprBlindBomber</sprite>
+      <sprite>sprites\sprRanentaur</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>

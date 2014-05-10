@@ -19,7 +19,7 @@ for(kx=initX-range; kx<=initX+range;kx++){
         for(kz=initZ-range; kz<=initZ+range;kz++){
             if (kx+ky+kz == 0){
                 if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                        objMapManager.mapAbleToAttack[kx+(kz-(kz&1))/2,kz] =1;
+                        objMapManager.mapAbleToAttack[kx+(kz-(kz&1))/2,kz] = true;
             }
         }
     }
