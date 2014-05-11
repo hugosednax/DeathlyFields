@@ -9,8 +9,6 @@
     <sprites name="MapElements">
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
-      <sprite>sprites\Mech</sprite>
-      <sprite>sprites\sprTroll</sprite>
       <sprite>sprites\build</sprite>
       <sprite>sprites\sprGround</sprite>
       <sprite>sprites\sprGroundDiamond</sprite>
@@ -28,12 +26,20 @@
       <sprite>sprites\sprBlueBlock</sprite>
       <sprite>sprites\sprInterfaceRect</sprite>
       <sprite>sprites\sprite18</sprite>
-      <sprite>sprites\sprBlindBomber</sprite>
-      <sprite>sprites\sprRanentaur</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
       <sprite>sprites\sprCard2</sprite>
+    </sprites>
+    <sprites name="Unit">
+      <sprite>sprites\sprRanentaur</sprite>
+      <sprite>sprites\sprBlindBomber</sprite>
+      <sprite>sprites\sprTroll</sprite>
+      <sprite>sprites\Mech</sprite>
+      <sprite>sprites\sprMechaBear</sprite>
+    </sprites>
+    <sprites name="Building">
+      <sprite>sprites\sprBuilding1</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -92,6 +98,10 @@
         <object>objects\objRanentaur</object>
         <object>objects\objBlindBomber</object>
         <object>objects\objTroll</object>
+        <object>objects\objMechaBear</object>
+      </objects>
+      <objects name="Buildings">
+        <object>objects\objBuilding1</object>
       </objects>
     </objects>
     <objects name="Deck">
