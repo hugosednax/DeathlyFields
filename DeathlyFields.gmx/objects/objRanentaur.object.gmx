@@ -32,7 +32,7 @@
 /*Attack Range*/    2,
 /*Hitpoints*/       4,
 /*Attack damage*/   2,
-/*Move Range*/      2,
+/*Move Range*/      3,
 /*Team*/            0
 );
 </string>

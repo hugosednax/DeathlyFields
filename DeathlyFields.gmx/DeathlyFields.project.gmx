@@ -97,14 +97,14 @@
     <objects name="Deck">
       <object>objects\objDeck</object>
       <object>objects\objIngameDeck</object>
-    </objects>
-    <objects name="Cards">
-      <object>objects\objCard1</object>
-      <object>objects\objCard2</object>
-      <object>objects\objCardParent</object>
-    </objects>
-    <objects name="Hand">
-      <object>objects\objHand</object>
+      <objects name="Hand">
+        <object>objects\objHand</object>
+      </objects>
+      <objects name="Cards">
+        <object>objects\objCard1</object>
+        <object>objects\objCard2</object>
+        <object>objects\objCardParent</object>
+      </objects>
     </objects>
     <objects name="GeneralParentObjs">
       <object>objects\objSelectable</object>

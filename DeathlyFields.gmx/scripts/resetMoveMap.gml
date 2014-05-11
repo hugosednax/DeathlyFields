@@ -5,10 +5,11 @@ for(i=0;i<MAP_WIDTH;i++){
     }
 }
 
-var initX,InitY,InitZ, moveRange;
-moveRange = argument0.moveRange;
-initX=argument0.mapPositionX - (argument0.mapPositionY- (argument0.mapPositionY&1))/2;
-initZ=argument0.mapPositionY;
+var initX,InitY,InitZ, moveRange, selectedObj;
+selectedObj = objSelectionManager.selectedInstance;
+moveRange = selectedObj.moveRange;
+initX=selectedObj.mapPositionX - (selectedObj.mapPositionY- (selectedObj.mapPositionY&1))/2;
+initZ=selectedObj.mapPositionY;
 initY=-(initX+initZ);
 
 var kx,ky,kz;
