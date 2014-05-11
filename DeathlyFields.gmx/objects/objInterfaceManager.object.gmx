@@ -54,11 +54,7 @@ var initX = view_xview[0];
 var initY = view_yview[0];
 var initWindowY = initY+VIEW_HEIGHT-220;
 draw_set_color(c_gray);
-//draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,0);
-//draw_sprite_ext(sprInterfaceRect,0,initX,initWindowY,VIEW_WIDTH/sprite_get_width(sprInterfaceRect),VIEW_HEIGHT/sprite_get_height(sprInterfaceRect),0,c_white,0.6);
-draw_set_color(c_black);
-//draw_rectangle(initX,initWindowY,initX+VIEW_WIDTH,initY+VIEW_HEIGHT,1);
-draw_set_color(c_black);
+draw_text(initX+VIEW_WIDTH-300,initWindowY+150,"Click &lt;Alt&gt; to swap teams");
 var objSel = objSelectionManager.selectedInstance;
 if(objSel != -1){
     draw_set_color(c_gray);
@@ -66,11 +62,7 @@ if(objSel != -1){
     draw_set_color(c_black);
     draw_text(initX+10,initWindowY+160,objSel.name);
     if(objSel.sprite_index!=-1){
-        /*draw_rectangle( initX,initY+VIEW_HEIGHT,
-                        initX+VIEW_WIDTH,initWindowY,1);*/
         draw_sprite_ext(sprBlackBlock,0,initX+10,initWindowY+10,100/sprite_get_width(sprBlackBlock),100/sprite_get_height(sprBlackBlock),0,c_white,0.5);
-        /*draw_rectangle( initX+10,initWindowY+10,
-                        initX+110,initWindowY+110,0);*/
         draw_sprite_ext(objSel.sprite_index,0,initX+60,initWindowY+60,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
         draw_set_color(c_black);
         draw_rectangle( initX+10,initWindowY+10,

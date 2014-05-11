@@ -6,20 +6,23 @@ for(i=0;i<MAP_WIDTH;i++){
 }
 
 var initX,InitY,InitZ, range;
-range = argument0.range;
-initX=argument0.mapPositionX - (argument0.mapPositionY- (argument0.mapPositionY&1))/2;
-initZ=argument0.mapPositionY;
-initY=-(initX+initZ);
-
-var kx,ky,kz;
-
-
-for(kx=initX-range; kx<=initX+range;kx++){
-    for(ky=initY-range; ky<=initY+range;ky++){
-        for(kz=initZ-range; kz<=initZ+range;kz++){
-            if (kx+ky+kz == 0){
-                if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                        objMapManager.mapAbleToAttack[kx+(kz-(kz&1))/2,kz] = true;
+var objSel = objSelectionManager.selectedInstance;
+if(objSel != -1){
+    range = objSel.range;
+    initX=objSel.mapPositionX - (objSel.mapPositionY- (objSel.mapPositionY&1))/2;
+    initZ=objSel.mapPositionY;
+    initY=-(initX+initZ);
+    
+    var kx,ky,kz;
+    
+    
+    for(kx=initX-range; kx<=initX+range;kx++){
+        for(ky=initY-range; ky<=initY+range;ky++){
+            for(kz=initZ-range; kz<=initZ+range;kz++){
+                if (kx+ky+kz == 0){
+                    if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
+                            objMapManager.mapAbleToAttack[kx+(kz-(kz&1))/2,kz] = true;
+                }
             }
         }
     }
