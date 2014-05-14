@@ -34,8 +34,11 @@ pushMapElement(objBlindBomber,10,10);
 pushMapElement(objRanentaur,6,14);
 pushMapElement(objTrollWarrior,7,10);
 pushMapElement(objTroll,12,11);
+<<<<<<< HEAD
 pushMapElement(objMechaBear,15,14);
 pushMapElement(objBuilding1,12,12);
+=======
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;

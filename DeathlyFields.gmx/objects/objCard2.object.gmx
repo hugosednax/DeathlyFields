@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>posX = x;
 posY = y;
+<<<<<<< HEAD
+=======
+name=objRanentaur;
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
 </string>
           </argument>
         </arguments>

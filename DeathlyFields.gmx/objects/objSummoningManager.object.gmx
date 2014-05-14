@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,37 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//nCardsHand=0;
-cardFromDeck=0;
-var i;
-for(i=0;i&lt;MAX_CARD_HAND;i++){
-    cardInHand[i]=-1;
-<<<<<<< HEAD
-}
-repeat(MAX_CARD_HAND){
-    GetCardFromDeck();
-}
-/*
-while(nCardsHand&lt;MAX_CARD_HAND &amp;&amp; objIngameDeck.ingameSize!=0){
-    cardFromDeck = nCardsHand;
-    CardInHand[nCardsHand]=instance_create(0,10+nCardsHand*(sprite_get_height(Card1)+8),objIngameDeck.ChosenDeckIngame[cardFromDeck]);
-    nCardsHand++;
-    objIngameDeck.ingameSize--;
-    objIngameDeck.ChosenDeckIngame[cardFromDeck]=-1;
-}*/
-=======
-}
-repeat(MAX_CARD_HAND){
-    GetCardFromDeck();
-}
-
->>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
+            <string>name=-1;
+cardname=-1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="56">
+    <event eventtype="6" enumb="51">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -72,7 +49,36 @@ repeat(MAX_CARD_HAND){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GetCardFromDeck();
+            <string>if(cardname!=-1) {
+cardname.visible=true;
+cardname=-1;
+name=-1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(name!=-1){
+        draw_sprite(name.sprite_index,0,mouse_x,mouse_y);
+}
 </string>
           </argument>
         </arguments>

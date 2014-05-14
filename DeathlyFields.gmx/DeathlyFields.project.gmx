@@ -9,6 +9,11 @@
     <sprites name="MapElements">
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
+<<<<<<< HEAD
+=======
+      <sprite>sprites\Mech</sprite>
+      <sprite>sprites\sprTroll</sprite>
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
       <sprite>sprites\build</sprite>
       <sprite>sprites\sprGround</sprite>
       <sprite>sprites\sprGroundDiamond</sprite>
@@ -26,6 +31,7 @@
       <sprite>sprites\sprBlueBlock</sprite>
       <sprite>sprites\sprInterfaceRect</sprite>
       <sprite>sprites\sprite18</sprite>
+<<<<<<< HEAD
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -40,6 +46,14 @@
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sprBuilding1</sprite>
+=======
+      <sprite>sprites\sprBlindBomber</sprite>
+      <sprite>sprites\sprRanentaur</sprite>
+    </sprites>
+    <sprites name="Cards">
+      <sprite>sprites\sprCard1</sprite>
+      <sprite>sprites\sprCard2</sprite>
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -60,17 +74,22 @@
       <script>scripts\pushMapElement.gml</script>
       <script>scripts\moveMapElement.gml</script>
       <script>scripts\unitBasicStats.gml</script>
-    </scripts>
-    <scripts name="Control">
-      <script>scripts\clickOnFloor.gml</script>
-      <script>scripts\clickSelection.gml</script>
-      <script>scripts\clickToSelect.gml</script>
-      <script>scripts\convertIndexToCoordinates.gml</script>
-      <script>scripts\convertCoordinatesToIndex.gml</script>
-      <script>scripts\initMap.gml</script>
-      <scripts name="Movement">
-        <script>scripts\drawPositionsToMove.gml</script>
-        <script>scripts\resetMoveMap.gml</script>
+      <scripts name="Control">
+        <script>scripts\clickOnFloor.gml</script>
+        <script>scripts\clickSelection.gml</script>
+        <script>scripts\clickToSelect.gml</script>
+        <script>scripts\convertIndexToCoordinates.gml</script>
+        <script>scripts\convertCoordinatesToIndex.gml</script>
+        <script>scripts\initMap.gml</script>
+        <scripts name="Movement">
+          <script>scripts\drawPositionsToMove.gml</script>
+          <script>scripts\resetMoveMap.gml</script>
+        </scripts>
+        <scripts name="Attack">
+          <script>scripts\drawPositionToAttack.gml</script>
+          <script>scripts\resetAttackMap.gml</script>
+          <script>scripts\normalAttack.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Attack">
         <script>scripts\drawPositionToAttack.gml</script>
@@ -89,6 +108,7 @@
       <object>objects\objDebugPrint</object>
       <object>objects\objSelectionManager</object>
       <object>objects\objInterfaceManager</object>
+      <object>objects\objSummoningManager</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
@@ -98,10 +118,13 @@
         <object>objects\objRanentaur</object>
         <object>objects\objBlindBomber</object>
         <object>objects\objTroll</object>
+<<<<<<< HEAD
         <object>objects\objMechaBear</object>
       </objects>
       <objects name="Buildings">
         <object>objects\objBuilding1</object>
+=======
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
       </objects>
     </objects>
     <objects name="Deck">

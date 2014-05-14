@@ -27,8 +27,12 @@ with(objMapManager){
             mapContents[k,l] = objID;
         }
     }
+    
+<<<<<<< HEAD
+=======
     */
     
+>>>>>>> 45de7868f59b87349b9708874a3bfd5136e48eba
     objID.mapPositionX = initIndexX;
     objID.mapPositionY = initIndexY;        
 }
