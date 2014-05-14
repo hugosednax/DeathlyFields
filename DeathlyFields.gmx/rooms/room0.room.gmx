@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>8388863</colour>
+  <colour>8421504</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
@@ -59,6 +59,7 @@
     <instance objName="objDebugPrint" x="96" y="0" name="inst_645D37D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSelectionManager" x="128" y="0" name="inst_C983A525" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_1E00C02D" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
+    <instance objName="objSummoningManager" x="192" y="0" name="inst_D5BDCCD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objInterfaceManager" x="160" y="0" name="inst_F2B2DABB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

@@ -1,7 +1,9 @@
-cardFromDeck=0;
-while(objHand.nCardsHand<MAX_CARD_HAND && objIngameDeck.ingameSize!=0){
-objHand.CardInHand[objHand.nCardsHand]=instance_create(20,10+objHand.nCardsHand*(150),objIngameDeck.ChosenDeckIngame[cardFromDeck]);
-objHand.nCardsHand++;
-RemoveCardFromDeck(cardFromDeck);
-cardFromDeck++;
+var cardIterator;
+
+for(cardIterator=0;cardIterator<MAX_CARD_HAND && cardFromDeck<objIngameDeck.ingameSize;cardIterator++){
+    if(objHand.cardInHand[cardIterator]==-1){
+        objHand.cardInHand[cardIterator]=instance_create(VIEW_WIDTH/2+(cardIterator-1)*64,VIEW_HEIGHT-50,objIngameDeck.ChosenDeckIngame[cardFromDeck]);
+        objHand.cardInHand[cardIterator].index = cardIterator;
+        cardFromDeck++;
+    }    
 }

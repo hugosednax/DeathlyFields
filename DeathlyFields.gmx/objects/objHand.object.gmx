@@ -25,19 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MAX_CARD_HAND=5;
-nCardsHand=0;
-
-GetCardFromDeck();
-
-
-while(nCardsHand&lt;MAX_CARD_HAND &amp;&amp; objIngameDeck.ingameSize!=0){
-cardFromDeck = nCardsHand;
-CardInHand[nCardsHand]=instance_create(0,10+nCardsHand*(sprite_get_height(Card1)+8),objIngameDeck.ChosenDeckIngame[cardFromDeck]);
-nCardsHand++;
-objIngameDeck.ingameSize--;
-objIngameDeck.ChosenDeckIngame[cardFromDeck]=-1;
+            <string>//nCardsHand=0;
+cardFromDeck=0;
+var i;
+for(i=0;i&lt;MAX_CARD_HAND;i++){
+    cardInHand[i]=-1;
 }
+repeat(MAX_CARD_HAND){
+    GetCardFromDeck();
+}
+
 </string>
           </argument>
         </arguments>

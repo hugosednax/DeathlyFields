@@ -10,20 +10,30 @@
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
       <sprite>sprites\Mech</sprite>
+      <sprite>sprites\sprTroll</sprite>
       <sprite>sprites\build</sprite>
       <sprite>sprites\sprGround</sprite>
       <sprite>sprites\sprGroundDiamond</sprite>
       <sprite>sprites\sprMapBlockRedDiamong</sprite>
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprFogBlock</sprite>
+      <sprite>sprites\sprBlackBlock</sprite>
       <sprite>sprites\sprHexagonBlock</sprite>
+      <sprite>sprites\sprite17</sprite>
+      <sprite>sprites\sprHexagonBlock2</sprite>
       <sprite>sprites\sprHexagonFog</sprite>
+      <sprite>sprites\sprite19</sprite>
+      <sprite>sprites\sprite20</sprite>
       <sprite>sprites\sprRedBlock</sprite>
       <sprite>sprites\sprBlueBlock</sprite>
       <sprite>sprites\sprInterfaceRect</sprite>
+      <sprite>sprites\sprite18</sprite>
+      <sprite>sprites\sprBlindBomber</sprite>
+      <sprite>sprites\sprRanentaur</sprite>
     </sprites>
     <sprites name="Cards">
-      <sprite>sprites\Card1</sprite>
+      <sprite>sprites\sprCard1</sprite>
+      <sprite>sprites\sprCard2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -44,17 +54,22 @@
       <script>scripts\pushMapElement.gml</script>
       <script>scripts\moveMapElement.gml</script>
       <script>scripts\unitBasicStats.gml</script>
-    </scripts>
-    <scripts name="Control">
-      <script>scripts\clickOnFloor.gml</script>
-      <script>scripts\clickSelection.gml</script>
-      <script>scripts\clickToSelect.gml</script>
-      <script>scripts\convertIndexToCoordinates.gml</script>
-      <script>scripts\convertCoordinatesToIndex.gml</script>
-      <script>scripts\initMap.gml</script>
-      <scripts name="Movement">
-        <script>scripts\drawPositionsToMove.gml</script>
-        <script>scripts\resetMoveMap.gml</script>
+      <scripts name="Control">
+        <script>scripts\clickOnFloor.gml</script>
+        <script>scripts\clickSelection.gml</script>
+        <script>scripts\clickToSelect.gml</script>
+        <script>scripts\convertIndexToCoordinates.gml</script>
+        <script>scripts\convertCoordinatesToIndex.gml</script>
+        <script>scripts\initMap.gml</script>
+        <scripts name="Movement">
+          <script>scripts\drawPositionsToMove.gml</script>
+          <script>scripts\resetMoveMap.gml</script>
+        </scripts>
+        <scripts name="Attack">
+          <script>scripts\drawPositionToAttack.gml</script>
+          <script>scripts\resetAttackMap.gml</script>
+          <script>scripts\normalAttack.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Draw">
@@ -68,33 +83,40 @@
       <object>objects\objDebugPrint</object>
       <object>objects\objSelectionManager</object>
       <object>objects\objInterfaceManager</object>
+      <object>objects\objSummoningManager</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
       <object>objects\objresource</object>
       <objects name="Units">
-        <object>objects\objUnit</object>
+        <object>objects\objTrollWarrior</object>
+        <object>objects\objRanentaur</object>
+        <object>objects\objBlindBomber</object>
+        <object>objects\objTroll</object>
       </objects>
     </objects>
     <objects name="Deck">
       <object>objects\objDeck</object>
       <object>objects\objIngameDeck</object>
-    </objects>
-    <objects name="Cards">
-      <object>objects\objCard1</object>
-      <object>objects\objCardParent</object>
-    </objects>
-    <objects name="Hand">
-      <object>objects\objHand</object>
+      <objects name="Hand">
+        <object>objects\objHand</object>
+      </objects>
+      <objects name="Cards">
+        <object>objects\objCard1</object>
+        <object>objects\objCard2</object>
+        <object>objects\objCardParent</object>
+      </objects>
     </objects>
     <objects name="GeneralParentObjs">
       <object>objects\objSelectable</object>
+      <object>objects\objSelectableCard</object>
+      <object>objects\objSelectableUnit</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="7">
+  <constants number="9">
     <constant name="MAP_WIDTH">80</constant>
     <constant name="MAP_HEIGHT">80</constant>
     <constant name="BLOCK_SIZE">64</constant>
@@ -102,6 +124,8 @@
     <constant name="VIEW_HEIGHT">700</constant>
     <constant name="MAP_INIT_POSITION_X">room_width/2 - MAP_WIDTH*BLOCK_SIZE/2</constant>
     <constant name="MAP_INIT_POSITION_Y">room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2</constant>
+    <constant name="DECK_SIZE">20</constant>
+    <constant name="MAX_CARD_HAND">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

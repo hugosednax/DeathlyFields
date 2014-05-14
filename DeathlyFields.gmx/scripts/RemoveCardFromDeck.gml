@@ -1,4 +1,4 @@
-
+/*
 ToRemove = argument0;
 
 for(i=0;i<objIngameDeck.ingameSize;i++){
@@ -10,4 +10,4 @@ for(i=0;i<objIngameDeck.ingameSize;i++){
     }
 }
 
-objIngameDeck.ingameSize--;
+objIngameDeck.ingameSize--;*/

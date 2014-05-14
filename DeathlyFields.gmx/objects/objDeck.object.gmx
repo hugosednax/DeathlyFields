@@ -25,41 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>DECK_SIZE=20;
-
-
-ChosenDeck[0]=objCard1;
-ChosenDeck[1]=objCard1;
+            <string>ChosenDeck[0]=objCard1;
+ChosenDeck[1]=objCard2;
 ChosenDeck[2]=objCard1;
 ChosenDeck[3]=objCard1;
-ChosenDeck[4]=objCard1;
+ChosenDeck[4]=objCard2;
 ChosenDeck[5]=objCard1;
 
 currSize=array_length_1d(ChosenDeck);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="57">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if !instance_exists(objIngameDeck){
-instance_create(0,0,objIngameDeck);
+
+if !instance_exists(objIngameDeck){
+    instance_create(0,0,objIngameDeck);
 }
 </string>
           </argument>

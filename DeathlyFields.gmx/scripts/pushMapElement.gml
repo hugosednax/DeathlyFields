@@ -11,6 +11,13 @@ with(objMapManager){
                             newCoordinates div 10000,
                             argument0);
     mapContents[initIndexX,initIndexY] = objID;
+    if(objID.team == 0){
+        objMapManager.objsTeam0[objMapManager.objsTeam0Size]=objID;
+        objMapManager.objsTeam0Size++
+    }else{
+        objMapManager.objsTeam1[objMapManager.objsTeam1Size]=objID;
+        objMapManager.objsTeam1Size++
+    }
     /*
     width  = objID.sprite_width /32;
     height = objID.sprite_height/32;
@@ -20,27 +27,8 @@ with(objMapManager){
             mapContents[k,l] = objID;
         }
     }
-    */
     
-    var initX,InitY,InitZ, sight;
-    sight = objID.sight;
-    initX=initIndexX - (initIndexY- (initIndexY&1))/2;
-    initZ=initIndexY;
-    initY=-(initX+initZ);
-
-    var kx,ky,kz;
-
-
-    for(kx=initX-sight; kx<=initX+sight;kx++){
-        for(ky=initY-sight; ky<=initY+sight;ky++){
-            for(kz=initZ-sight; kz<=initZ+sight;kz++){
-                if (kx+ky+kz == 0){
-                    if(kx+(kz-(kz&1))/2 >= 0 && kx+(kz-(kz&1))/2<MAP_WIDTH && kz>=0 && kz<MAP_HEIGHT)
-                        mapFog[kx+(kz-(kz&1))/2,kz] ++;
-                }
-            }
-        }
-    }
+    */
     
     objID.mapPositionX = initIndexX;
     objID.mapPositionY = initIndexY;        

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -32,7 +32,7 @@ view_yview[0] = MAP_INIT_POSITION_Y;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,20 +49,27 @@ view_yview[0] = MAP_INIT_POSITION_Y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-var prevColor = draw_get_color();
+            <string>var prevColor = draw_get_color();
+var initX = view_xview[0];
+var initY = view_yview[0];
+var initWindowY = initY+VIEW_HEIGHT-220;
 draw_set_color(c_gray);
-//draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,0);
-draw_sprite_ext(sprInterfaceRect,0,VIEW_WIDTH-320,0,VIEW_WIDTH/sprInterfaceRect.sprite_width,VIEW_HEIGHT/sprInterfaceRect.sprite_height,0,c_white,0.6);
-draw_set_color(c_black);
-draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,1);
-draw_set_color(c_black);
-objSel = objSelectionManager.selectedInstance;
+draw_text(initX+VIEW_WIDTH-300,initWindowY+150,"Click &lt;Alt&gt; to swap teams");
+var objSel = objSelectionManager.selectedInstance;
 if(objSel != -1){
-    draw_text(VIEW_WIDTH-300,60,objSel.name);
+    draw_set_color(c_gray);
+    draw_rectangle(initX+10,initWindowY+160,initX+10+max(100,string_width(objSel.name)),initWindowY+175,0);
+    draw_set_color(c_black);
+    draw_text(initX+10,initWindowY+160,objSel.name);
     if(objSel.sprite_index!=-1){
-        draw_rectangle(VIEW_WIDTH-300,90,VIEW_WIDTH-200,190,1);
-        draw_sprite_ext(objSel.sprite_index,0,VIEW_WIDTH-250,140,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+        draw_sprite_ext(sprBlackBlock,0,initX+10,initWindowY+10,100/sprite_get_width(sprBlackBlock),100/sprite_get_height(sprBlackBlock),0,c_white,0.5);
+        draw_sprite_ext(objSel.sprite_index,0,initX+60,initWindowY+60,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+        draw_set_color(c_black);
+        draw_rectangle( initX+10,initWindowY+10,
+                        initX+110,initWindowY+110,1);
+        draw_rectangle_color(   initX+10,initWindowY+120,
+                                initX+10+100*objSel.hitpointsCurr/objSel.hitpointsMax,initWindowY+150,
+                                c_green,c_green,c_green,c_green,0);
     }
 }
 draw_set_color(prevColor);
